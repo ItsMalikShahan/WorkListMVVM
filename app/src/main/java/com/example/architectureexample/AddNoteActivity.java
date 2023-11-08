@@ -46,6 +46,12 @@ public class AddNoteActivity extends AppCompatActivity {
 
         }
         Intent data = new Intent();
+        data.putExtra(EXTRA_TITLE,titleStr);
+        data.putExtra(EXTRA_DESCRIPTION,descriptionStr);
+        data.putExtra(EXTRA_PRIORITY, priorityInt);
+
+        setResult(RESULT_OK, data);
+        finish();
     }
 
     @Override
